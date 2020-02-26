@@ -1,8 +1,7 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System;
+using UnityEngine;
 
 public class Pathfinding : MonoBehaviour
 {
@@ -98,7 +97,6 @@ public class Pathfinding : MonoBehaviour
 
     int TurningCost(Node from, Node to)
     {
-
         Vector2 dirOld = new Vector2(from.gridX - from.parent.gridX, from.gridY - from.parent.gridY);
         Vector2 dirNew = new Vector2(to.gridX - from.gridX, to.gridY - from.gridY);
         if (dirNew == dirOld)
@@ -111,9 +109,6 @@ public class Pathfinding : MonoBehaviour
         {
             return 10;
         }
-
-
-        //return 0;
     }
 
     Vector2[] RetracePath(Node startNode, Node endNode)

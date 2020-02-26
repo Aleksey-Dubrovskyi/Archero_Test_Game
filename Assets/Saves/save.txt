@@ -1,0 +1,1 @@
+{"playerHP":1000,"playerSpeed":5.0,"shellDamage":150,"meleDamage":100,"shellSpeed":20.0,"slyderHealth":200,"flyerHealth":400,"bossHealth":2250,"slyderSpeed":3.0,"flyerSpeed":5.0,"bossSpeed":2.0}

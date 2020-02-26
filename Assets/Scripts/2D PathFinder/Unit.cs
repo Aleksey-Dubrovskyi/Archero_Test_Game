@@ -5,7 +5,7 @@ public class Unit : MonoBehaviour
 {
 
     public Transform target;
-    public float speed = 20;
+    public float speed = 5;
     private Vector2[] path;
     private int targetIndex;
 
@@ -46,9 +46,12 @@ public class Unit : MonoBehaviour
                     {
                         yield break;
                     }
-                    currentWaypoint = path[targetIndex];                    
+                    currentWaypoint = path[targetIndex];
                 }
-                transform.position = Vector2.MoveTowards(transform.position, currentWaypoint, speed * Time.deltaTime);
+                if (target != null)
+                {
+                    transform.position = Vector2.MoveTowards(transform.position, currentWaypoint, speed * Time.deltaTime);
+                }
                 yield return null;
 
             }
