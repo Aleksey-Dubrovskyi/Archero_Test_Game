@@ -31,15 +31,12 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject enemysContainer;
     Scene activeScene;
-    //private Enemy[] spawnedEnemies;
     private List<Enemy> spawnedEnemies;
     private SaveHandler saveHandler;
 
     private void Awake()
     {
         instance = this;
-
-
     }
 
     // Start is called before the first frame update
@@ -47,11 +44,11 @@ public class GameManager : MonoBehaviour
     {
         saveHandler = GetComponent<SaveHandler>();
         activeScene = SceneManager.GetActiveScene();
-        spawnedEnemies = /*new Enemy[5]*/ new List<Enemy>();
+        spawnedEnemies = new List<Enemy>();
         gameState = GameState.Play;
         EnemySpawner();
-        saveHandler.Load();
         saveHandler.Save();
+        saveHandler.Load();
         Player.instance.healthBar.SetMaxHealth(Player.instance.playerHP);
     }
 

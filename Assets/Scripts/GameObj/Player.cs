@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         playerState = PlayerState.Stand;
-        PlayerBehavior();        
+        PlayerBehavior();
     }
 
     private void Update()
